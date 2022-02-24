@@ -3,7 +3,6 @@ local HttpService = game:GetService("HttpService")
 local GameList = "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/gamelist.json"
 local GameListJSON = HttpService:JSONDecode(game:HttpGet(GameList))
 
-
 callbacks.Load = function()
     local xdloader = Instance.new("ScreenGui")
     local main = Instance.new("ImageLabel")
