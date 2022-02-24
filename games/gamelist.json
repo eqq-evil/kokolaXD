@@ -1,10 +1,10 @@
 {
-    "5098929086": {
-        "Name": "Tapping Simulator",
+    "Tapping_Simulator": {
+        "PlaceID": 5098929086,
         "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/tapping_simulator.lua"
     },
-    "155615604": {
-        "Name": "Prison Life",
+    "Prison_Life": {
+        "PlaceID": 155615604,
         "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/prison_life.lua"
     }
 }
