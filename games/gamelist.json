@@ -1,4 +1,10 @@
 {
-    "5098929086": "Tapping Simulator",
-    "155615604": "Prison Life"
+    "5098929086": {
+        "Name": "Tapping Simulator",
+        "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/tapping_simulator.lua"
+    },
+    "155615604": {
+        "Name": "Prison Life",
+        "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/prison_life.lua"
+    }
 }
