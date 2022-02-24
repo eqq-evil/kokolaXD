@@ -4,13 +4,11 @@ local GameList = "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/gamel
 local GameListJSON = HttpService:JSONDecode(game:HttpGet(GameList))
 
 callbacks.universal = function()
-    if GameListJSON.universal.Enabled == true then
-        game.StarterGui:SetCore("SendNotification", {
-            Title = "kokolaXD",
-            Text = "Game: "..GameListJSON.universal.Name.."\nLoaded!"
-        })
-        loadstring(game:HttpGet(GameListJSON.universal.ScriptURL))()
-    end
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "kokolaXD",
+        Text = "Game: "..GameListJSON.universal.Name.."\nLoaded!"
+    })
+    loadstring(game:HttpGet(GameListJSON.universal.ScriptURL))()
 end
 
 callbacks.Load = function()
