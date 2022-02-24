@@ -1,4 +1,5 @@
-local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
+game.Players.LocalPlayer:Kick("\n\ncomming soon!\n\n")
+--[[local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
 local w = lib.new("kokolaXD in beta")
 local page1 = w:addPage("Home")
 
@@ -24,4 +25,4 @@ if not syn_decompile then
     end
 end
 
-w:SelectPage(w.pages[1], true)
+w:SelectPage(w.pages[1], true)]]
