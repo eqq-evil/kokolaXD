@@ -3,6 +3,16 @@ local HttpService = game:GetService("HttpService")
 local GameList = "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/gamelist.json"
 local GameListJSON = HttpService:JSONDecode(game:HttpGet(GameList))
 
+callbacks.universal = function()
+    if GameListJSON.universal.Enabled == true then
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "kokolaXD",
+            Text = "Game: "..GameListJSON.universal.Name.."\nLoaded!"
+        })
+        loadstring(game:HttpGet(GameListJSON.universal.ScriptURL))()
+    end
+end
+
 callbacks.Load = function()
     local xdloader = Instance.new("ScreenGui")
     local main = Instance.new("ImageLabel")
@@ -62,6 +72,7 @@ callbacks.Load = function()
     main:TweenPosition(UDim2.new(-0.407, 0, -0.428, 0),"Out","Quint",0.7)
     wait(1)
     xdloader:Destroy()
+
     if game.PlaceId == GameListJSON.game1.PlaceID then
         if GameListJSON.game1.Enabled == true then
             game.StarterGui:SetCore("SendNotification", {
@@ -69,6 +80,8 @@ callbacks.Load = function()
                 Text = "Game: "..GameListJSON.game1.Name.."\nLoaded!"
             })
             loadstring(game:HttpGet(GameListJSON.game1.ScriptURL))()
+        else
+            callbacks.universal()
         end
     elseif game.PlaceId == GameListJSON.game2.PlaceID then
         if GameListJSON.game2.Enabled == true then
@@ -77,14 +90,8 @@ callbacks.Load = function()
                 Text = "Game: "..GameListJSON.game2.Name.."\nLoaded!"
             })
             loadstring(game:HttpGet(GameListJSON.game2.ScriptURL))()
-        end
-    else
-        if GameListJSON.universal.Enabled == true then
-            game.StarterGui:SetCore("SendNotification", {
-                Title = "kokolaXD",
-                Text = "Game: "..GameListJSON.universal.Name.."\nLoaded!"
-            })
-            loadstring(game:HttpGet(GameListJSON.universal.ScriptURL))()
+        else
+            callbacks.universal()
         end
     end
 end
