@@ -1,10 +1,12 @@
 {
-    "Tapping_Simulator": {
+    "game1": {
         "PlaceID": 5098929086,
-        "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/tapping_simulator.lua"
+        "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/tapping_simulator.lua",
+        "Name": "Tapping Simulator"
     },
-    "Prison_Life": {
+    "game2": {
         "PlaceID": 155615604,
-        "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/prison_life.lua"
+        "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/prison_life.lua",
+        "Name": "Prison Life"
     }
 }
