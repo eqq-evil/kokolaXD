@@ -63,9 +63,29 @@ callbacks.Load = function()
     wait(1)
     xdloader:Destroy()
     if game.PlaceId == GameListJSON.game1.PlaceID then
-        loadstring(game:HttpGet(GameListJSON.game1.ScriptURL))()
+        if GameListJSON.game1.Enabled == true then
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "kokolaXD",
+                Text = "Game: "..GameListJSON.game1.Name.."\nLoaded!"
+            })
+            loadstring(game:HttpGet(GameListJSON.game1.ScriptURL))()
+        end
     elseif game.PlaceId == GameListJSON.game2.PlaceID then
-        loadstring(game:HttpGet(GameListJSON.game2.ScriptURL))()
+        if GameListJSON.game2.Enabled == true then
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "kokolaXD",
+                Text = "Game: "..GameListJSON.game2.Name.."\nLoaded!"
+            })
+            loadstring(game:HttpGet(GameListJSON.game2.ScriptURL))()
+        end
+    else
+        if GameListJSON.universal.Enabled == true then
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "kokolaXD",
+                Text = "Game: "..GameListJSON.universal.Name.."\nLoaded!"
+            })
+            loadstring(game:HttpGet(GameListJSON.universal.ScriptURL))()
+        end
     end
 end
 
