@@ -10,6 +10,21 @@ local function GetTeam()
 	return game.Players.LocalPlayer.TeamColor.Name
 end
 
+local function GetPlayer(String)
+	if not String then return end
+	local Yes = {}
+	for _, Player in ipairs(game.Players:GetPlayers()) do
+		if string.lower(Player.Name):match(string.lower(String)) or string.lower(Player.DisplayName):match(string.lower(String)) then
+			table.insert(Yes, Player)
+		end
+	end
+	if #Yes > 0 then
+		return Yes[1]
+	elseif #Yes < 1 then
+		return nil
+	end
+end
+
 local function Kill(Player)
 	pcall(function()
 		if Player.Character:FindFirstChild("ForceField") or not workspace:FindFirstChild(Player.Name) or not workspace:FindFirstChild(Player.Name):FindFirstChild("Head") or Player == nil or Player.Character.Parent ~= workspace then return end
@@ -98,6 +113,18 @@ end)
 
 section1:addSlider("JumpPower",math.floor(lplr.Character.Humanoid.JumpPower),math.floor(lplr.Character.Humanoid.JumpPower),1000,function(val)
     lplr.Character.Humanoid.JumpPower = val
+end)
+
+section2:addTextbox("Kill", "Player", function(v,l)
+    local Player = GetPlayer(v)
+    if l then
+        if Player ~= nil then
+            Kill(Player)
+            w:Notify("Success", "Killed "..Player.Name)
+        else
+            w:Notify("Error", "No player found")
+        end
+    end
 end)
 
 section2:addButton("Kill all",function()
