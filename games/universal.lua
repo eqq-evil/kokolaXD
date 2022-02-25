@@ -3,6 +3,7 @@ local w = lib.new("kokolaXD in beta")
 local page1 = w:addPage("Home")
 
 local section1 = page1:addSection("LocalPlayer")
+
 local lplr = game:GetService("Players").LocalPlayer
 
 section1:addSlider("WalkSpeed",math.floor(lplr.Character.Humanoid.WalkSpeed),math.floor(lplr.Character.Humanoid.WalkSpeed),1000,function(val)
