@@ -9,7 +9,7 @@
         "PlaceID": 155615604,
         "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/prison_life.lua",
         "Name": "Prison Life",
-        "Enabled": false
+        "Enabled": true
     },
     "game3": {
         "PlaceId": 1,
