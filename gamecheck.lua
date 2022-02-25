@@ -24,7 +24,6 @@ callbacks.Load = function()
     main.Parent = xdloader
     main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     main.BackgroundTransparency = 1.000
-    main.Position = UDim2.new(0.406811148, 0, 0.427509308, 0)
     main.Size = UDim2.new(0, 300, 0, 116)
     main.Image = "rbxassetid://3570695787"
     main.ImageColor3 = Color3.fromRGB(65, 88, 57)
@@ -58,7 +57,7 @@ callbacks.Load = function()
     main.Position = UDim2.new(-0.407, 0, -0.428, 0)
     wait(0.1)
     main:TweenPosition(UDim2.new(0.407, 0, 0.428, 0),"Out","Quint",0.7)
-    for i = 1,3,1 do
+    for _ = 1,3,1 do
         wait(2)
         game:GetService("TweenService"):Create(kokola, TweenInfo.new(0.25), {TextColor3 = Color3.fromRGB(107, 144, 93)}):Play()
         game:GetService("TweenService"):Create(XD, TweenInfo.new(0.25), {TextColor3 = Color3.fromRGB(144, 144, 144)}):Play()
@@ -88,6 +87,16 @@ callbacks.Load = function()
                 Text = "Game: "..GameListJSON.game2.Name.."\nLoaded!"
             })
             loadstring(game:HttpGet(GameListJSON.game2.ScriptURL))()
+        else
+            callbacks.universal()
+        end
+    elseif game.PlaceId == GameListJSON.game3.PlaceID then
+        if GameListJSON.game3.Enabled == true then
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "kokolaXD",
+                Text = "Game: "..GameListJSON.game3.Name.."\nLoaded!"
+            })
+            loadstring(game:HttpGet(GameListJSON.game3.ScriptURL))()
         else
             callbacks.universal()
         end
