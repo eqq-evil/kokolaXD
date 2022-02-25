@@ -11,6 +11,12 @@
         "Name": "Prison Life",
         "Enabled": false
     },
+    "game3": {
+        "PlaceId": 1,
+        "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/jailbreak.lua",
+        "Name": "Jailbreak",
+        "Enabled": false
+    },
     "universal": {
         "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/universal.lua",
         "Name": "Universal",
