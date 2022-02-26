@@ -185,6 +185,8 @@ section2:addToggle("Loop Kill Guards", false, function(bool)
     end
 end)
 
+w:SelectPage(w.pages[1], true)
+
 if not syn_decompile then
     if not KRNL_LOADED then
         w:Notify("kokolaXD Script Support","Since you are not using synapse, I recommend you use krnl. Would you like to copy download link?",function(v)
@@ -195,8 +197,6 @@ if not syn_decompile then
         end)
     end
 end
-
-w:SelectPage(w.pages[1], true)
 
 while true do
     wait(.1)
