@@ -1,24 +1,24 @@
 {
     "game1": {
         "PlaceID": 5098929086,
-        "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/tapping_simulator.lua",
+        "ScriptURL": "https://eqq-evil.github.io/kokolaXD/games/tapping_simulator.lua",
         "Name": "Tapping Simulator",
         "Enabled": false
     },
     "game2": {
         "PlaceID": 155615604,
-        "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/prison_life.lua",
+        "ScriptURL": "https://eqq-evil.github.io/kokolaXDgames/prison_life.lua",
         "Name": "Prison Life",
         "Enabled": true
     },
     "game3": {
         "PlaceId": 1,
-        "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/jailbreak.lua",
+        "ScriptURL": "https://eqq-evil.github.io/kokolaXD/games/jailbreak.lua",
         "Name": "Jailbreak",
         "Enabled": false
     },
     "universal": {
-        "ScriptURL": "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/games/universal.lua",
+        "ScriptURL": "https://eqq-evil.github.io/kokolaXD/games/universal.lua",
         "Name": "Universal",
         "Enabled": true
     }
