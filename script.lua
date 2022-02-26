@@ -1,1 +1,1 @@
-loadstring(game:HttpGetAsync'https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/gamecheck.lua')()
+loadstring(game:HttpGetAsync"https://eqq-evil.github.io/kokolaXD/gamecheck.lua")()
