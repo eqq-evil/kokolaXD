@@ -1,3 +1,22 @@
+local HttpService = game:GetService("HttpService")
+local DataList = "https://raw.githubusercontent.com/eqq-evil/kokolaXD/main/kokolaxd_data.json"
+local DataListJSON = HttpService:JSONDecode(game:HttpGet(DataList))
+
+getfenv().Version = DataListJSON.Version
+getfenv().Licence = DataListJSON.Licence
+getfenv().Creator = DataListJSON.Creator
+getfenv().Name = DataListJSON.Name
+
+repeat wait() until getfenv().Version ~= nil
+repeat wait() until getfenv().Licence ~= nil
+repeat wait() until getfenv().Creator ~= nil
+repeat wait() until getfenv().Name ~= nil
+
+--[[
+    Venyx UI
+    Source: https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua
+]]
+
 -- init
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
