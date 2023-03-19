@@ -1,4 +1,4 @@
-local function GetPos()
+--[[local function GetPos()
 	return game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end
 
@@ -225,4 +225,6 @@ while true do
             end
         end
     end
-end
+end]]
+
+game.Players.LocalPlayer:Kick("project discountinued.")
