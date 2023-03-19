@@ -1,1 +1,1 @@
---comming soon
+game.Players.LocalPlayer:Kick("project discountinued.")
